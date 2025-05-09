@@ -2,7 +2,7 @@
 
 Tracking robin visits to a nest using Ring cameras, LandingAI, Snowflake, and Streamlit.
 
-![Streamlit App Screenshot](data/streamlit-app.png)
+<!-- ![Streamlit App Screenshot](data/streamlit-app.png) -->
 
 ## Prerequisites
 

@@ -94,4 +94,3 @@ async def download_recording(ring, auth, recording_id, device_name=None, snapsho
             print(f"[yellow]Recording not ready yet, retrying... ({e})[/yellow]")
             await asyncio.sleep(2)
     return filename
-    return filename

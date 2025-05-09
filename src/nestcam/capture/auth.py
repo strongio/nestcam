@@ -40,4 +40,3 @@ async def do_auth():
     except Requires2FAError:
         await auth.async_fetch_token(RING_USERNAME, RING_PASSWORD, otp_callback())
     return auth
-    return auth

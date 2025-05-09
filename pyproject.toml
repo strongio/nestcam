@@ -1,0 +1,35 @@
+[project]
+name = "nestcam"
+version = "0.1.0"
+description = "A pipeline to detect robin visits using Ring, LandingAI, and Snowflake with a Streamlit interface."
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+  "streamlit>=1.45",
+  "pandas>=2.2.2",
+  "snowflake-connector-python>=3.11",
+  "python-dotenv>=1.0.1",
+  "opencv-python-headless>=4.11.0.86",
+  "opencv-python>=4.11.0.86",
+  "requests>=2.32.2",
+  "ring_doorbell>=0.9.13",
+  "typer>=0.15.3"
+]
+
+[project.optional-dependencies]
+dev = [
+  "black",
+  "flake8",
+  "pytest"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+nestcam = "nestcam.cli:app"

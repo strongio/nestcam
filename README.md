@@ -106,6 +106,17 @@ QUALIFY ROW_NUMBER() OVER (PARTITION BY event_id ORDER BY confidence DESC) = 1;
 
 **Credentials**
 
+- Add the following credentials to your `.env` file:
+    - `SNOWFLAKE_USER`
+    - `SNOWFLAKE_PASSWORD`
+    - `SNOWFLAKE_ACCOUNT`
+    - `SNOWFLAKE_WAREHOUSE`
+    - `SNOWFLAKE_DATABASE`
+    - `SNOWFLAKE_SCHEMA`
+    - `SNOWFLAKE_IMAGE_STAGE`
+    - `SNOWFLAKE_INFERENCE_TABLE`
+    - `SNOWFLAKE_AUTHENTICATOR`
+
 
 </details>
 
@@ -153,5 +164,7 @@ nestcam streamlit
 ```
 
 ### Architecture
+
+Overview of how the app works.
 
 ![Streamlit App Screenshot](data/architecture.png)

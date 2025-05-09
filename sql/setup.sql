@@ -1,0 +1,33 @@
+-- Create and use the database
+CREATE DATABASE IF NOT EXISTS LANDINGLENS_DEMO_DB;
+USE DATABASE LANDINGLENS_DEMO_DB;
+
+-- Create and use the schema
+CREATE SCHEMA IF NOT EXISTS VIDEO_STREAM;
+USE SCHEMA VIDEO_STREAM;
+
+-- Create stage for staging input images
+CREATE STAGE IF NOT EXISTS VIDEO_STREAM_IMAGES;
+
+-- Grant permissions to application LANDINGLENS_DEMO
+GRANT USAGE ON DATABASE LANDINGLENS_DEMO_DB TO APPLICATION LANDINGLENS_DEMO;
+GRANT USAGE ON SCHEMA LANDINGLENS_DEMO_DB.VIDEO_STREAM TO APPLICATION LANDINGLENS_DEMO;
+GRANT READ ON STAGE LANDINGLENS_DEMO_DB.VIDEO_STREAM.VIDEO_STREAM_IMAGES TO APPLICATION LANDINGLENS_DEMO;
+
+-- Create a table to store inference results per image
+CREATE TABLE VIDEO_STREAM_INFERENCE (
+    filename VARCHAR,
+    endpoint_id STRING,
+    dt_year INT,
+    dt_month INT,
+    dt_day INT,
+    dt_hour INT,
+    dt_minute INT,
+    dt_second INT,
+    label_name STRING,
+    label_index INT,
+    confidence FLOAT,
+    bboxes VARIANT,
+    id STRING,
+    event_id STRING,
+);

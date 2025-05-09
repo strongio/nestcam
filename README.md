@@ -131,8 +131,7 @@ nestcam collect-data --device-name "Front Door" --minutes 60
 ```
 
 ### Label Data, Train, and Deploy
-
-This is all done in LandingLens. Visit `https://support.landing.ai/` for more information.
+This is all done in LandingLens. Visit [LandingAI Support](https://support.landing.ai/) for more information.
 
 ### Inference
 Once a model is deployed you'll want to update your LandingLens environment variables:
@@ -152,3 +151,7 @@ While the pipeline is running you can also run the Streamlit app to visualize th
 ```bash
 nestcam streamlit
 ```
+
+### Architecture
+
+![Streamlit App Screenshot](data/architecture.png)
